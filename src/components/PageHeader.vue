@@ -1,10 +1,11 @@
 <template>
     <div class="image-wrapper">
-        <img src="../assets/images/hero-07-2x.jpg" alt="">
+        <img class="bg-image" src="../assets/images/hero-07-2x.jpg" alt="author image">
         <div class="image-filter">
         </div>
         <div class="container">
-            <div class="logo-wrapper">LOGO</div>
+            <div class="logo-wrapper"><img src="../assets/images/author-logo-round.png" alt="author logo" class="logo">
+            </div>
             <nav>
                 <ul>
                     <li><a href="#">Home</a></li>
@@ -22,12 +23,20 @@
                 <p class="citation">Best-selling author and the most influential public intellectual in the western world
                     right
                     now.</p>
-                <p class="source">- The New York Times</p>
+                <p class="source">- The New York Times</p>.
+                <div>
+                    <button class="prev-button"><i class="fa-solid fa-arrow-left"></i></button>
+                    <button class="next-button"><i class="fa-solid fa-arrow-right"></i></button>
+                </div>
+            </div>
+            <div class="side-squares">
+                <div class="side-square">Demos</div>
+                <div class="side-square">Price</div>
             </div>
             <div class="ads">
                 <div class="ads-container">
                     <div class="ads-in">
-                        <div class="left">IMMAGINE</div>
+                        <div class="left"></div>
                         <div class="right">
                             <h5>Latest Book Release</h5>
                             <h6>D.VAUGHN AUTOBIOGRAPHY</h6>
@@ -36,8 +45,8 @@
                         </div>
                     </div>
                     <div class="buttons">
-                        <BuyButton />
-                        <BuyButton />
+                        <a href="#"><i class="fa-brands fa-amazon"></i><span>Buy on Amazon</span></a>
+                        <a href="#"><i class="fa-brands fa-apple"></i><span> Buy on AppStore</span></a>
                     </div>
                 </div>
 
@@ -47,12 +56,10 @@
 </template>
 
 <script>
-import BuyButton from './BuyButton.vue';
+
 export default {
     name: 'PageHeader',
-    components: {
-        BuyButton,
-    }
+
 }
 </script>
 <style scoped lang="scss">
@@ -65,7 +72,7 @@ export default {
     overflow-y: hidden;
     height: 450px;
 
-    img {
+    .bg-image {
         width: 100%;
         height: 500px;
         transform: translate(0px, -30px);
@@ -89,17 +96,19 @@ export default {
         left: 0;
 
         .logo-wrapper {
-            height: 80px;
-            width: 80px;
-            background-color: pink;
+            height: 110px;
+            width: 110px;
             position: absolute;
-            left: 100px;
-            top: 20px;
+            left: 80px;
+            top: 15px;
 
+            .logo {
+                height: 100%;
+            }
         }
 
         nav {
-            margin-right: 70px;
+            margin-right: 80px;
 
             ul {
                 list-style: none;
@@ -107,7 +116,7 @@ export default {
                 justify-content: flex-end;
 
                 li {
-                    padding: 0px 10px;
+                    padding: 0px 9px;
 
                     a {
                         text-decoration: none;
@@ -123,6 +132,23 @@ export default {
                         }
                     }
                 }
+            }
+        }
+
+        .side-squares {
+            width: 40px;
+            position: absolute;
+            top: 80px;
+            right: 5px;
+
+            .side-square {
+                width: 100%;
+                aspect-ratio: 1;
+                margin-bottom: 10px;
+                background-color: pink;
+                font-size: 10px;
+                border-radius: 3px;
+                text-align: center;
             }
         }
 
@@ -151,6 +177,21 @@ export default {
                 font-size: 14px;
                 margin-top: 15px;
             }
+
+            .prev-button,
+            .next-button {
+                height: 30px;
+                aspect-ratio: 1;
+                background-color: variables.$color-black;
+                color: white;
+                border: none;
+                margin-right: 3px;
+                font-size: 10px;
+
+                &:hover {
+                    cursor: pointer;
+                }
+            }
         }
 
         .ads {
@@ -162,35 +203,43 @@ export default {
             bottom: 0;
 
             .ads-container {
-                background-color: pink;
+
                 height: 92%;
-                width: 92%;
-                margin: 8% 0px 0px 8%;
+                width: 90%;
+                margin: 10% 0px 0px 10%;
+                padding-right: 35px;
 
                 .ads-in {
-                    height: 130px;
                     width: 100%;
                     display: flex;
 
                     .left {
                         width: 50%;
+                        height: 140px;
+                        background-image: url(../assets/images/book-widget.png);
+                        background-repeat: no-repeat;
+                        background-size: contain;
+
+
                     }
 
                     .right {
                         width: 50%;
 
                         h5 {
-                            font-size: 16px;
+                            font-size: 15px;
                             margin: 10px 0px;
                         }
 
                         h6 {
                             color: variables.$color-saffron;
                             margin: 5px 0px 10px;
+                            font-size: 10px;
                         }
 
                         p {
-                            font-size: 12px;
+                            font-size: 11px;
+                            color: variables.$color-tundora;
                         }
                     }
 
@@ -201,10 +250,31 @@ export default {
                     margin-top: 5px;
                     justify-content: center;
 
-                    border-radius: 5px;
-
-                    &:first-child {
+                    a {
+                        text-decoration: none;
+                        color: variables.$color-black;
+                        padding: 7px 0px;
+                        display: block;
+                        width: 50%;
+                        text-align: center;
                         border: 1px solid variables.$color-kappel-dark-vibrant;
+                        font-size: 12px;
+
+                        span {
+                            margin-left: 5px;
+                        }
+                    }
+
+                    a:first-child {
+
+                        border-bottom-left-radius: 5px;
+                        border-top-left-radius: 5px;
+                    }
+
+                    a:nth-child(2) {
+
+                        border-bottom-right-radius: 5px;
+                        border-top-right-radius: 5px;
                     }
                 }
             }
