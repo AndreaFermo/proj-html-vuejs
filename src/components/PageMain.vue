@@ -4,7 +4,7 @@
     </section>
 
     <section id="platforms">
-
+        <MyPlatforms />
     </section>
 
     <section id="audiobook">
@@ -34,10 +34,12 @@
 
 <script>
 import MyMeetAuthor from './PageMainComponents/MyMeetAuthor.vue';
+import MyPlatforms from './PageMainComponents/MyPlatforms.vue';
 export default {
     name: 'PageMain',
     components: {
-        MyMeetAuthor
+        MyMeetAuthor,
+        MyPlatforms
     }
 }
 </script>
@@ -47,6 +49,12 @@ export default {
 #meet-author {
     text-align: center;
     margin-top: 50px;
+}
+
+#platforms {
+    background-color: variables.$color-cream;
+    width: 1100px;
+    margin: 80px auto 0px;
 }
 </style>
 
