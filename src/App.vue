@@ -1,48 +1,22 @@
-<template>
-  <header>
-    <nav></nav>
-    <div class="jumbotron"></div>
-    <div class="jumbotron-right-section"></div>
-  </header>
-  <main>
-    <section id="meet-author">
-
-    </section>
-
-    <section id="platforms">
-
-    </section>
-
-    <section id="audiobook">
-
-    </section>
-
-    <section id="critics">
-
-    </section>
-
-    <section id="events">
-
-    </section>
-
-    <section id="newsletter">
-
-    </section>
-
-    <section id="author-info"> <!-- simile alla section events-->
-
-    </section>
-
-    <section id="recent-articles"> <!-- simile alla section critics-->
-
-    </section>
-  </main>
-  <footer>
-    <!-- simile al footer di dc-comics-->
-  </footer>
-</template>
+<template></template>
 <script >
+import { store } from './store.js';
+import PageHeader from './components/PageHeader.vue';
+import PageMain from './components/PageMain.vue';
+import PageFooter from './components/PageFooter.vue';
 
+export default {
+  components: {
+    PageHeader,
+    PageMain,
+    PageFooter,
+  },
+  data() {
+    return {
+      store
+    }
+  }
+}
 </script>
 <style lang="scss">
 @use './styles/general.scss' as *;
