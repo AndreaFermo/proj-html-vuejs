@@ -8,13 +8,7 @@
             </div>
             <nav>
                 <ul>
-                    <li><a href="#">Home</a></li>
-                    <li><a href="#">About Me</a></li>
-                    <li><a href="#">Testimonials</a></li>
-                    <li><a href="#">My Blog</a></li>
-                    <li><a href="#">Meetups</a></li>
-                    <li><a href="#">Shop</a></li>
-                    <li><a href="#">Contact Me</a></li>
+                    <li v-for="element in navbarSelections"><a href="#"> {{ element }}</a></li>
                     <li><a href="#"><i class="fa-solid fa-cart-shopping"></i></a></li>
                 </ul>
             </nav>
@@ -30,8 +24,10 @@
                 </div>
             </div>
             <div class="side-squares">
-                <div class="side-square">Demos</div>
-                <div class="side-square">Price</div>
+                <div class="side-square"><i class="fa-solid fa-folder-open"></i><span> Demos</span></div>
+                <div class="side-square"><span class="dollar">$</span><span class="price">39</span>
+                    <p>On Sale</p>
+                </div>
             </div>
             <div class="ads">
                 <div class="ads-container">
@@ -59,6 +55,9 @@
 
 export default {
     name: 'PageHeader',
+    props: {
+        navbarSelections: Array
+    }
 
 }
 </script>
@@ -145,10 +144,41 @@ export default {
                 width: 100%;
                 aspect-ratio: 1;
                 margin-bottom: 10px;
-                background-color: pink;
+                background-color: variables.$color-white;
                 font-size: 10px;
                 border-radius: 3px;
                 text-align: center;
+
+
+                &:hover {
+                    cursor: pointer;
+                }
+
+                i {
+                    font-size: 16px;
+                    margin: 4px 0px;
+                    color: variables.$color-tundora;
+                }
+
+                .dollar {
+                    display: inline-block;
+                    transform: translate(0px, -10px);
+                    top: 3px;
+                    left: 3px;
+                }
+
+                .price {
+                    font-size: 25px;
+                }
+
+                .dollar,
+                .price {
+                    color: variables.$color-light-green;
+                }
+
+                p {
+                    font-size: 10px;
+                }
             }
         }
 
