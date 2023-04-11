@@ -1,4 +1,6 @@
-<template></template>
+<template>
+  <PageHeader />
+</template>
 <script >
 import { store } from './store.js';
 import PageHeader from './components/PageHeader.vue';
