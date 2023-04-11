@@ -1,6 +1,6 @@
 <template>
     <section id="meet-author">
-
+        <MyMeetAuthor />
     </section>
 
     <section id="platforms">
@@ -33,9 +33,20 @@
 </template>
 
 <script>
+import MyMeetAuthor from './PageMainComponents/MyMeetAuthor.vue';
 export default {
-    name: 'PageMain'
+    name: 'PageMain',
+    components: {
+        MyMeetAuthor
+    }
 }
 </script>
-<style scoped lang="scss"></style>
+<style scoped lang="scss">
+@use '../styles/partials/variables';
+
+#meet-author {
+    text-align: center;
+    margin-top: 50px;
+}
+</style>
 

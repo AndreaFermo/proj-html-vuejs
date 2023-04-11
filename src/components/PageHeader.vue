@@ -162,13 +162,14 @@ export default {
 
                 .dollar {
                     display: inline-block;
-                    transform: translate(0px, -10px);
+                    transform: translate(0px, -5px);
                     top: 3px;
                     left: 3px;
                 }
 
                 .price {
-                    font-size: 25px;
+                    font-size: 20px;
+
                 }
 
                 .dollar,
@@ -188,7 +189,7 @@ export default {
             width: 580px;
 
             .author-name {
-                font-family: 'Kristi', cursive;
+                font-family: variables.$font-kristi;
                 font-weight: 400;
                 font-size: 54px;
                 color: variables.$color-saffron;
@@ -199,7 +200,7 @@ export default {
                 color: variables.$color-white;
                 font-size: 26px;
                 line-height: 36px;
-                font-family: 'DM Serif Display', serif;
+                font-family: variables.$font-dm-serif-display;
             }
 
             .source {
@@ -289,6 +290,10 @@ export default {
                         text-align: center;
                         border: 1px solid variables.$color-kappel-dark-vibrant;
                         font-size: 12px;
+
+                        &:hover {
+                            border-color: variables.$color-blue-lagoon;
+                        }
 
                         span {
                             margin-left: 5px;

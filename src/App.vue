@@ -1,5 +1,6 @@
 <template>
   <PageHeader :navbarSelections="store.navbarSelections" />
+  <PageMain />
 </template>
 <script >
 import { store } from './store.js';
