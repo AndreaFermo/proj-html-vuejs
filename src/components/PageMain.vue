@@ -16,7 +16,7 @@
     </section>
 
     <section id="events">
-
+        <MyEvents />
     </section>
 
     <section id="newsletter">
@@ -37,13 +37,15 @@ import MyMeetAuthor from './PageMainComponents/MyMeetAuthor.vue';
 import MyPlatforms from './PageMainComponents/MyPlatforms.vue';
 import MyAudiobook from './PageMainComponents/MyAudiobook.vue';
 import MyCritics from './PageMainComponents/MyCritics.vue';
+import MyEvents from './PageMainComponents/MyEvents.vue';
 export default {
     name: 'PageMain',
     components: {
         MyMeetAuthor,
         MyPlatforms,
         MyAudiobook,
-        MyCritics
+        MyCritics,
+        MyEvents
     }
 }
 </script>
@@ -69,6 +71,14 @@ export default {
 #critics {
     width: 750px;
     margin: auto;
+    margin-bottom: 50px;
+}
+
+#events {
+    width: 1100px;
+    margin: auto;
+    background-color: variables.$color-cream;
+    text-align: center;
     margin-bottom: 500px;
 }
 </style>
