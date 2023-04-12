@@ -28,7 +28,7 @@
     </section>
 
     <section id="recent-articles"> <!-- simile alla section critics-->
-
+        <MyRecentArticles />
     </section>
 </template>
 
@@ -40,6 +40,8 @@ import MyCritics from './PageMainComponents/MyCritics.vue';
 import MyEvents from './PageMainComponents/MyEvents.vue';
 import MyNewsletter from './PageMainComponents/MyNewsletter.vue';
 import MyAuthorInfo from './PageMainComponents/MyAuthorInfo.vue';
+import MyRecentArticles from './PageMainComponents/MyRecentArticles.vue';
+
 export default {
     name: 'PageMain',
     components: {
@@ -49,7 +51,8 @@ export default {
         MyCritics,
         MyEvents,
         MyNewsletter,
-        MyAuthorInfo
+        MyAuthorInfo,
+        MyRecentArticles
     }
 }
 </script>
@@ -91,10 +94,16 @@ export default {
 }
 
 #author-info {
-    width: 850px;
+    width: 930px;
     margin: auto;
     text-align: center;
-    margin-bottom: 500px;
+    margin-bottom: 50px;
+}
+
+#recent-articles {
+    background-color: variables.$color-cream;
+    width: 1100px;
+    margin: auto;
 }
 </style>
 

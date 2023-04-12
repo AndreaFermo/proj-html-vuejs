@@ -59,7 +59,7 @@ h4 {
     .card {
         margin: 15px;
         width: calc((100% / 3) - 30px);
-        height: 300px;
+        height: 340px;
         overflow: hidden;
         border-bottom-right-radius: 50px;
         position: relative;
@@ -75,12 +75,12 @@ h4 {
         }
 
         img {
-            width: 320px;
+            width: 360px;
         }
 
         .card-info {
             position: absolute;
-            bottom: 25px;
+            bottom: 30px;
             left: 50%;
             transform: translate(-50%, 0);
 
