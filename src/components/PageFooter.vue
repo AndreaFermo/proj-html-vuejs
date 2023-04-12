@@ -23,7 +23,7 @@
                     <li>63 E. Studebaker Street Bolingbrook, IL 60440</li>
                     <li>Phone: (800) 000-0000</li>
                     <li>Mobile: (800) 000-0000</li>
-                    <li>Email: info@your-company.com</li>
+                    <li>Email: <a href="#" class="email">info@your-company.com</a></li>
                     <li>
                         <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
                         <a href="#"><i class="fa-brands fa-twitter"></i></a>
@@ -83,6 +83,7 @@ export default {
                 font-size: 10px;
                 padding: 10px 100px 10px 0px;
                 line-height: 20px;
+                color: variables.$color-pewter;
             }
 
             ul {
