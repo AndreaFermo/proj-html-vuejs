@@ -13,7 +13,7 @@
         </div>
         <div class="card">
             <img src="../../assets/images/event-04-400x240.jpg" alt="chicago">
-            <h5>Chicago Book Signing</h5>
+            <h5>Meet & Greet With Amanda</h5>
             <div class="event-container">
                 <p>Marius blandit aliquet elit, eget tincidunt nibh pulvinar a. Mauris blandit aliquet elit, eget tincidunt
                     nibh
@@ -22,7 +22,7 @@
         </div>
         <div class="card">
             <img src="../../assets/images/event-07-400x240.jpg" alt="chicago">
-            <h5>Chicago Book Signing</h5>
+            <h5>Open Book: Dialogues</h5>
             <div class="event-container">
                 <p>Marius blandit aliquet elit, eget tincidunt nibh pulvinar a. Mauris blandit aliquet elit, eget tincidunt
                     nibh

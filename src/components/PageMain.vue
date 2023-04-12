@@ -20,7 +20,7 @@
     </section>
 
     <section id="newsletter">
-
+        <MyNewsletter />
     </section>
 
     <section id="author-info"> <!-- simile alla section events-->
@@ -38,6 +38,7 @@ import MyPlatforms from './PageMainComponents/MyPlatforms.vue';
 import MyAudiobook from './PageMainComponents/MyAudiobook.vue';
 import MyCritics from './PageMainComponents/MyCritics.vue';
 import MyEvents from './PageMainComponents/MyEvents.vue';
+import MyNewsletter from './PageMainComponents/MyNewsletter.vue';
 export default {
     name: 'PageMain',
     components: {
@@ -45,7 +46,8 @@ export default {
         MyPlatforms,
         MyAudiobook,
         MyCritics,
-        MyEvents
+        MyEvents,
+        MyNewsletter
     }
 }
 </script>
@@ -79,7 +81,11 @@ export default {
     margin: auto;
     background-color: variables.$color-cream;
     text-align: center;
-    margin-bottom: 500px;
+}
+
+#newsletter {
+    width: 1100px;
+    margin: auto;
 }
 </style>
 
