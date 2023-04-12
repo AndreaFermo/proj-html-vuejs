@@ -59,6 +59,8 @@ export default {
     margin: auto;
     position: relative;
 
+
+
     img {
         position: absolute;
         width: 90px;
@@ -105,8 +107,20 @@ export default {
                         color: variables.$color-white;
                         text-decoration: none;
 
+                        .fa-brands {
+                            padding-top: 20px;
+                        }
+
+                        &:hover {
+                            color: variables.$color-saffron;
+                        }
+
                         i {
                             padding-right: 15px;
+
+                            &:hover {
+                                color: variables.$color-saffron;
+                            }
                         }
 
                     }
@@ -117,13 +131,17 @@ export default {
 
     .copyright {
         text-align: center;
-        padding-top: 80px;
+        padding-top: 60px;
         font-size: 10px;
         color: variables.$color-pewter;
 
         a {
             text-decoration: none;
             color: variables.$color-white;
+
+            &:hover {
+                color: variables.$color-saffron;
+            }
         }
     }
 }
