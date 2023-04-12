@@ -23,8 +23,8 @@
         <MyNewsletter />
     </section>
 
-    <section id="author-info"> <!-- simile alla section events-->
-
+    <section id="author-info">
+        <MyAuthorInfo />
     </section>
 
     <section id="recent-articles"> <!-- simile alla section critics-->
@@ -39,6 +39,7 @@ import MyAudiobook from './PageMainComponents/MyAudiobook.vue';
 import MyCritics from './PageMainComponents/MyCritics.vue';
 import MyEvents from './PageMainComponents/MyEvents.vue';
 import MyNewsletter from './PageMainComponents/MyNewsletter.vue';
+import MyAuthorInfo from './PageMainComponents/MyAuthorInfo.vue';
 export default {
     name: 'PageMain',
     components: {
@@ -47,7 +48,8 @@ export default {
         MyAudiobook,
         MyCritics,
         MyEvents,
-        MyNewsletter
+        MyNewsletter,
+        MyAuthorInfo
     }
 }
 </script>
@@ -86,6 +88,13 @@ export default {
 #newsletter {
     width: 1100px;
     margin: auto;
+}
+
+#author-info {
+    width: 850px;
+    margin: auto;
+    text-align: center;
+    margin-bottom: 500px;
 }
 </style>
 

@@ -2,7 +2,7 @@
     <div class="newsletter-container">
         <h3>Subscribe To My Newsletter</h3>
         <h4>BE NOTIFIED ABOUT BOOK SIGNIN TOUR DATES</h4>
-        <input type="text" placeholder="Insert your email...*">
+        <input type="email" placeholder="Insert your email...*">
         <button>Subscribe</button>
         <p>Donec fringilla nunc eu turpis dignissim, at euismod sapien tincidunt.</p>
     </div>
