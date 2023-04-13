@@ -63,6 +63,12 @@ h4 {
         overflow: hidden;
         border-bottom-right-radius: 50px;
         position: relative;
+        transition: transform .3s;
+
+        &:hover {
+            filter: drop-shadow(8px 8px 10px gray);
+            transform: scale(1.05);
+        }
 
         .filter {
             background-image: linear-gradient(rgba(0, 0, 0, 0.125), rgba(0, 0, 0, 0.542));

@@ -70,6 +70,10 @@ export default {
             padding: 10px 50px;
             font-size: 10px;
             border-radius: 5px;
+
+            &:hover {
+                background-color: variables.$color-saffron-hover;
+            }
         }
     }
 

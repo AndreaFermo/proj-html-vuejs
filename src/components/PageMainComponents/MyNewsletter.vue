@@ -54,6 +54,7 @@ export default {
 
         &:hover {
             cursor: pointer;
+            background-color: variables.$color-green-hover;
         }
     }
 

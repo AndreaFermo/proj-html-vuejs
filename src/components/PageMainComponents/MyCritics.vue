@@ -84,6 +84,10 @@ export default {
         padding: 10px 25px;
         font-size: 10px;
         border-radius: 5px;
+
+        &:hover {
+            background-color: variables.$color-saffron-hover;
+        }
     }
 }
 

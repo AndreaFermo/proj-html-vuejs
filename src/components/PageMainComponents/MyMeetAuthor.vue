@@ -34,5 +34,9 @@ a {
     background-color: variables.$color-green;
     padding: 10px 25px;
     border-radius: 5px;
+
+    &:hover {
+        background-color: variables.$color-green-hover;
+    }
 }
 </style>

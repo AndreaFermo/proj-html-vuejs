@@ -65,8 +65,13 @@ h4 {
         margin: 15px;
         width: calc((100% / 3) - 30px);
 
+        &:hover img {
+            filter: brightness(1.4) opacity(0.7);
+        }
+
         img {
             width: 100%;
+            transition: filter .5s;
         }
 
         h5 {
