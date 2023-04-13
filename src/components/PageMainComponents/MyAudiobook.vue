@@ -10,9 +10,7 @@
                 cursus.
             </p>
             <div class="logos-container">
-                <img src="../../assets/images/audible-logo.png" alt="logo audible">
-                <img src="../../assets/images/bn-logo-tall.png" alt="logo barnes & noble">
-                <img src="../../assets/images/kindle-logo-tall.png" alt="logo kindle fire">
+                <img v-for="(image, index) in images" :src="getImagePath(image)" :alt="image" :key="index">
             </div>
         </div>
 
@@ -21,7 +19,17 @@
 </template>
 <script>
 export default {
-    name: 'MyAudiobook'
+    name: 'MyAudiobook',
+    data() {
+        return {
+            images: ['audible-logo', 'bn-logo-tall', 'kindle-logo-tall']
+        }
+    },
+    methods: {
+        getImagePath: function (img) {
+            return new URL(`../../assets/images/${img}.png`, import.meta.url).href;
+        }
+    }
 }
 </script>
 <style scoped lang="scss">

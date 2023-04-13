@@ -2,41 +2,44 @@
     <h3>Upcoming Events</h3>
     <h4>MEET THE AUTHOR IN PERSON</h4>
     <div class="cards-container">
-        <div class="card">
-            <img src="../../assets/images/event-05-400x240.jpg" alt="chicago">
-            <h5>Chicago Book Signing</h5>
+        <div class="card" v-for="(card, index) in cards" :kei="index">
+            <img :src="getImagePath(card.image)" alt="chicago">
+            <h5>{{ card.name }}</h5>
             <div class="event-container">
-                <p>Marius blandit aliquet elit, eget tincidunt nibh pulvinar a. Mauris blandit aliquet elit, eget tincidunt
-                    nibh
-                    pulvinar a nulla.</p>
+                <p>{{ card.text }}</p>
             </div>
         </div>
-        <div class="card">
-            <img src="../../assets/images/event-04-400x240.jpg" alt="amanda">
-            <h5>Meet & Greet With Amanda</h5>
-            <div class="event-container">
-                <p>Marius blandit aliquet elit, eget tincidunt nibh pulvinar a. Mauris blandit aliquet elit, eget tincidunt
-                    nibh
-                    pulvinar a nulla.</p>
-            </div>
-        </div>
-        <div class="card">
-            <img src="../../assets/images/event-07-400x240.jpg" alt="book">
-            <h5>Open Book: Dialogues</h5>
-            <div class="event-container">
-                <p>Marius blandit aliquet elit, eget tincidunt nibh pulvinar a. Mauris blandit aliquet elit, eget tincidunt
-                    nibh
-                    pulvinar a nulla.</p>
-            </div>
-
-
-        </div>
-
     </div>
 </template>
 <script>
 export default {
-    name: 'MyEvents'
+    name: 'MyEvents',
+    data() {
+        return {
+            cards: [
+                {
+                    name: 'Chicago Book Signing',
+                    text: 'Marius blandit aliquet elit, eget tincidunt nibh pulvinar a. Mauris blandit aliquet elit, eget tincidunt nibh pulvinar a nulla.',
+                    image: '5'
+                },
+                {
+                    name: 'Meet & Greet With Amanda',
+                    text: 'Marius blandit aliquet elit, eget tincidunt nibh pulvinar a. Mauris blandit aliquet elit, eget tincidunt nibh pulvinar a nulla.',
+                    image: '4'
+                },
+                {
+                    name: 'Open Book: Dialogues',
+                    text: 'Marius blandit aliquet elit, eget tincidunt nibh pulvinar a. Mauris blandit aliquet elit, eget tincidunt nibh pulvinar a nulla.',
+                    image: '7'
+                }
+            ]
+        }
+    },
+    methods: {
+        getImagePath: function (img) {
+            return new URL(`../../assets/images/event-0${img}-400x240.jpg`, import.meta.url).href;
+        }
+    }
 }
 </script>
 

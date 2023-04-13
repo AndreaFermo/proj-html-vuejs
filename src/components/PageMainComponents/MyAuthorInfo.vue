@@ -2,33 +2,13 @@
     <h3>Dig A Little Dipper Into Damon Vaughn</h3>
     <h4>FIND OUT MORE ABOUT THE AUTHOR HIMSELF</h4>
     <div class="cards-container">
-        <div class="card">
-            <img src="../../assets/images/box-1.jpg" alt="">
+        <div class="card" v-for="(card, index) in cards" :kei="index">
+            <img :src="getImagePath(card.image)" :alt="card.image">
             <div class="filter">
                 <div class="card-info">
-                    <h5>Abot Me</h5>
+                    <h5>{{ card.name }}</h5>
                     <div class="line"></div>
-                    <p>Vestibulum ante ipsum primis</p>
-                </div>
-            </div>
-        </div>
-        <div class="card">
-            <img src="../../assets/images/box-4.jpg" alt="">
-            <div class="filter">
-                <div class="card-info">
-                    <h5>My Latest Book</h5>
-                    <div class="line"></div>
-                    <p>Vestibulum ante ipsum primis</p>
-                </div>
-            </div>
-        </div>
-        <div class="card">
-            <img src="../../assets/images/box-3.jpg" alt="">
-            <div class="filter">
-                <div class="card-info">
-                    <h5>Book Signing</h5>
-                    <div class="line"></div>
-                    <p>Vestibulum ante ipsum primis</p>
+                    <p>{{ card.text }}</p>
                 </div>
             </div>
         </div>
@@ -36,7 +16,33 @@
 </template>
 <script>
 export default {
-    name: 'MyAuthorInfo'
+    name: 'MyAuthorInfo',
+    data() {
+        return {
+            cards: [
+                {
+                    name: 'Abot Me',
+                    text: 'Vestibulum ante ipsum primis',
+                    image: '1'
+                },
+                {
+                    name: 'My Latest Book',
+                    text: 'Vestibulum ante ipsum primis',
+                    image: '4'
+                },
+                {
+                    name: 'Book Signing',
+                    text: 'Vestibulum ante ipsum primis',
+                    image: '3'
+                }
+            ]
+        }
+    },
+    methods: {
+        getImagePath: function (img) {
+            return new URL(`../../assets/images/box-${img}.jpg`, import.meta.url).href;
+        }
+    }
 }
 </script>
 <style scoped lang="scss">

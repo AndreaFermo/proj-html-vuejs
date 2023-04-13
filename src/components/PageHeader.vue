@@ -221,6 +221,7 @@ export default {
 
                 &:hover {
                     cursor: pointer;
+                    border: 1px solid variables.$color-white;
                 }
             }
         }

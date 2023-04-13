@@ -24,6 +24,6 @@ export const store = reactive(
             'instagram',
             'linkedin-in',
             'youtube'
-        ]
+        ],
     }
 );

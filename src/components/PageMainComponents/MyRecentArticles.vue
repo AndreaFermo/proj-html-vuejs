@@ -18,15 +18,10 @@
                 </div>
             </div>
             <div class="right">
-                <div class="card">
-                    <img src="../../assets/images/thumb-13-2x-320x202.jpg" alt="magazin 1">
-                    <h5>What's On Your Booklist?</h5>
-                    <p>October 24th, 2019 | 0 comments</p>
-                </div>
-                <div class="card">
-                    <img src="../../assets/images/thumb-08-2x-320x202.jpg" alt="magazin 2">
-                    <h5>Instanbul Travel Guide</h5>
-                    <p>October 24th, 2019 | 0 comments</p>
+                <div class="card" v-for="(card, index) in cards" :kei="index">
+                    <img :src="getImagePath(card.image)" :alt="card.image">
+                    <h5>{{ card.name }}</h5>
+                    <p>{{ card.text }}</p>
                 </div>
             </div>
         </div>
@@ -34,7 +29,28 @@
 </template>
 <script>
 export default {
-    name: 'MyRecentArticles'
+    name: 'MyRecentArticles',
+    data() {
+        return {
+            cards: [
+                {
+                    name: 'What &#39 s On Your Booklist?',
+                    text: 'October 24th, 2019 | 0 comments',
+                    image: '13'
+                },
+                {
+                    name: 'Instanbul Travel Guide',
+                    text: 'October 24th, 2019 | 0 comments',
+                    image: '08'
+                },
+            ]
+        }
+    },
+    methods: {
+        getImagePath: function (img) {
+            return new URL(`../../assets/images/thumb-${img}-2x-320x202.jpg`, import.meta.url).href;
+        }
+    }
 }
 </script>
 <style scoped lang="scss">
