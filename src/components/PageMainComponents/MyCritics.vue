@@ -26,29 +26,27 @@
 
         </div>
         <div class="right">
-            <div class="card">
-                <div class="card-wrapper">
-                    <h3>A True Masterpiece, Bravo!</h3>
-                    <p>Nulla quis lorem ut libero malesuada feugiat. Vivamus magna justo, lacinia eget consectrtur sed,
-                        convallis at tellus. Vivamus suscipit tortor eget felis porttitor volupat. Nulla quis lorem ut
-                        libero
-                        malesuada feug at.</p>
-                </div>
-                <p class="jurnalist">
-                    <img src="../../assets/images/theguardian-xsmall.png" alt=""><span>Gerald Hendeley, The Guardian</span>
-                </p>
+            <div class="card-wrapper">
+                <div class="triangle"></div>
+                <h3>A True Masterpiece, Bravo!</h3>
+                <p>Nulla quis lorem ut libero malesuada feugiat. Vivamus magna justo, lacinia eget consectrtur sed,
+                    convallis at tellus. Vivamus suscipit tortor eget felis porttitor volupat. Nulla quis lorem ut
+                    libero
+                    malesuada feug at.</p>
             </div>
-            <div class="card">
-                <div class="card-wrapper">
-                    <h3>A Unique View On the World</h3>
-                    <p>Donec sollicitudin molestie malesuada. Curabitur arcu erat, accumsan id imperdiet et, porttitor at
-                        sem. Vestibulum ac diam sit amet quam vehicula elementum sed sit amet dui. Nulla quis lorem ut
-                        libero malesuada feugiat. Vestibulum ac diam sit amet</p>
-                </div>
-                <p class="jurnalist">
-                    <img src="../../assets/images/globe-xsmall.png" alt=""><span>Mary Maxey, The Globe And Mail</span>
-                </p>
+            <p class="jurnalist">
+                <img src="../../assets/images/theguardian-xsmall.png" alt=""><span>Gerald Hendeley, The Guardian</span>
+            </p>
+            <div class="card-wrapper">
+                <div class="triangle"></div>
+                <h3>A Unique View On the World</h3>
+                <p>Donec sollicitudin molestie malesuada. Curabitur arcu erat, accumsan id imperdiet et, porttitor at
+                    sem. Vestibulum ac diam sit amet quam vehicula elementum sed sit amet dui. Nulla quis lorem ut
+                    libero malesuada feugiat. Vestibulum ac diam sit amet</p>
             </div>
+            <p class="jurnalist">
+                <img src="../../assets/images/globe-xsmall.png" alt=""><span>Mary Maxey, The Globe And Mail</span>
+            </p>
         </div>
     </div>
 </template>
@@ -104,7 +102,7 @@ export default {
         margin-bottom: 32px;
 
         .left {
-            padding: 50px;
+            padding: 50px 50px 90px;
             background-color: rgba(0, 0, 0, 0.334);
             border-bottom-right-radius: 40px;
 
@@ -145,6 +143,17 @@ export default {
             background-color: variables.$color-cream;
             text-align: center;
             padding: 30px 15px;
+            position: relative;
+
+            .triangle {
+                background-color: variables.$color-cream;
+                width: 12px;
+                height: 12px;
+                position: absolute;
+                bottom: -7px;
+                left: 15px;
+                transform: rotate(45deg);
+            }
 
             h3 {
                 font-size: 14px;
@@ -155,15 +164,13 @@ export default {
                 font-size: 12px;
                 line-height: 20px;
             }
-
-
         }
 
         .jurnalist {
             display: flex;
             align-items: center;
             font-size: 12px;
-            padding: 5px 0px 20px;
+            padding: 8px 0px 20px;
 
             img {
                 height: 20px;
