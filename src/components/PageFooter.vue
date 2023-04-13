@@ -1,6 +1,6 @@
 <template>
     <div class="footer-container">
-        <img src="../assets/images/author-logo-round-200x205.png" alt="">
+        <img src="../assets/images/author-logo-round-200x205.png" alt="author logo">
         <div class="ultilityes-contaier">
             <div class="col">
                 <h3>ABOUT ME</h3>

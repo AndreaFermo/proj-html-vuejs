@@ -35,7 +35,8 @@
                     malesuada feug at.</p>
             </div>
             <p class="jurnalist">
-                <img src="../../assets/images/theguardian-xsmall.png" alt=""><span>Gerald Hendeley, The Guardian</span>
+                <img src="../../assets/images/theguardian-xsmall.png" alt="the guardian logo"><span>Gerald Hendeley, The
+                    Guardian</span>
             </p>
             <div class="card-wrapper">
                 <div class="triangle"></div>
@@ -45,7 +46,8 @@
                     libero malesuada feugiat. Vestibulum ac diam sit amet</p>
             </div>
             <p class="jurnalist">
-                <img src="../../assets/images/globe-xsmall.png" alt=""><span>Mary Maxey, The Globe And Mail</span>
+                <img src="../../assets/images/globe-xsmall.png" alt="the globe logo"><span>Mary Maxey, The Globe And
+                    Mail</span>
             </p>
         </div>
     </div>

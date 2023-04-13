@@ -10,7 +10,7 @@
         <div class="articles-bot">
             <div class="left">
                 <div class="card">
-                    <img src="../../assets/images/20-Tips-600x353.jpg" alt="">
+                    <img src="../../assets/images/20-Tips-600x353.jpg" alt="book it'll be okay and you will be too">
                     <h5>20 Creativity Tips</h5>
                     <p>By admin | October 24th, 2019 | Categories: Events, Tips & tricks</p>
                     <p>Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Donec velit
@@ -19,12 +19,12 @@
             </div>
             <div class="right">
                 <div class="card">
-                    <img src="../../assets/images/thumb-13-2x-320x202.jpg" alt="">
+                    <img src="../../assets/images/thumb-13-2x-320x202.jpg" alt="magazin 1">
                     <h5>What's On Your Booklist?</h5>
                     <p>October 24th, 2019 | 0 comments</p>
                 </div>
                 <div class="card">
-                    <img src="../../assets/images/thumb-08-2x-320x202.jpg" alt="">
+                    <img src="../../assets/images/thumb-08-2x-320x202.jpg" alt="magazin 2">
                     <h5>Instanbul Travel Guide</h5>
                     <p>October 24th, 2019 | 0 comments</p>
                 </div>
