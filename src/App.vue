@@ -1,7 +1,7 @@
 <template>
   <PageHeader :navbarSelections="store.navbarSelections" />
   <PageMain />
-  <PageFooter />
+  <PageFooter :links="store.usefulLinks" :socialIcons="store.socialIcons" />
 </template>
 <script >
 import { store } from './store.js';

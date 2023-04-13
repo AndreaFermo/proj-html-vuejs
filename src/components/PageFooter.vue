@@ -10,11 +10,8 @@
             <div class="col">
                 <h3>USEFUL LINKS</h3>
                 <ul>
-                    <li><a href="#"><i class="fa-solid fa-angle-right"></i>Latest Books</a></li>
-                    <li><a href="#"><i class="fa-solid fa-angle-right"></i>Upcoming Events</a></li>
-                    <li><a href="#"><i class="fa-solid fa-angle-right"></i>Recent Articles</a></li>
-                    <li><a href="#"><i class="fa-solid fa-angle-right"></i>Business Enquiries</a></li>
-                    <li><a href="#"><i class="fa-solid fa-angle-right"></i>Visit My Foundation</a></li>
+                    <li v-for="(element, index) in links" :key="index"><a href="#"><i class="fa-solid fa-angle-right"></i>{{
+                        element }}</a></li>
                 </ul>
             </div>
             <div class="col">
@@ -25,11 +22,8 @@
                     <li>Mobile: (800) 000-0000</li>
                     <li>Email: <a href="#" class="email">info@your-company.com</a></li>
                     <li>
-                        <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
-                        <a href="#"><i class="fa-brands fa-twitter"></i></a>
-                        <a href="#"><i class="fa-brands fa-instagram"></i></a>
-                        <a href="#"><i class="fa-brands fa-linkedin-in"></i></a>
-                        <a href="#"><i class="fa-brands fa-youtube"></i></a>
+                        <a href="#" v-for="(icon, index) in socialIcons" :key="index"><i
+                                :class="generateIcon(icon)"></i></a>
                     </li>
                 </ul>
             </div>
@@ -42,7 +36,19 @@
 
 <script>
 export default {
-    name: 'PageFooter'
+    name: 'PageFooter',
+    props: {
+        links: Array,
+        socialIcons: Array
+    },
+
+    methods: {
+        generateIcon(element) {
+            let faIcon = 'fa-brands fa-'
+            return faIcon += element
+        }
+    }
+
 }
 </script>
 <style scoped lang="scss">

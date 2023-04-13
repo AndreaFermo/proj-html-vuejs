@@ -8,7 +8,7 @@
             </div>
             <nav>
                 <ul>
-                    <li v-for="element in navbarSelections"><a href="#"> {{ element }}</a></li>
+                    <li v-for="(element, index) in navbarSelections" :key="index"><a href="#"> {{ element }}</a></li>
                     <li><a href="#"><i class="fa-solid fa-cart-shopping"></i></a></li>
                 </ul>
             </nav>

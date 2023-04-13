@@ -10,6 +10,20 @@ export const store = reactive(
             'Meetups',
             'Shop',
             'Contact Me',
+        ],
+        usefulLinks: [
+            'Latest Books',
+            'Upcoming Events',
+            'Recent Articles',
+            'Business Enquiries',
+            'Visit My Foundation'
+        ],
+        socialIcons: [
+            'facebook-f',
+            'twitter',
+            'instagram',
+            'linkedin-in',
+            'youtube'
         ]
     }
 );
