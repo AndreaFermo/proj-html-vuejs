@@ -26,35 +26,46 @@
 
         </div>
         <div class="right">
-            <div class="card-wrapper">
-                <div class="triangle"></div>
-                <h3>A True Masterpiece, Bravo!</h3>
-                <p>Nulla quis lorem ut libero malesuada feugiat. Vivamus magna justo, lacinia eget consectrtur sed,
-                    convallis at tellus. Vivamus suscipit tortor eget felis porttitor volupat. Nulla quis lorem ut
-                    libero
-                    malesuada feug at.</p>
+            <div class="card-wrapper" v-for="(card, index) in cards" :kei="index">
+                <div class="card">
+                    <div class="triangle"></div>
+                    <h3>{{ card.title }}</h3>
+                    <p>{{ card.text }}</p>
+                </div>
+                <p class="jurnalist">
+                    <img :src="getImagePath(card.image)" :alt="card.image"><span>{{ card.referance
+                    }}</span>
+                </p>
             </div>
-            <p class="jurnalist">
-                <img src="../../assets/images/theguardian-xsmall.png" alt="the guardian logo"><span>Gerald Hendeley, The
-                    Guardian</span>
-            </p>
-            <div class="card-wrapper">
-                <div class="triangle"></div>
-                <h3>A Unique View On the World</h3>
-                <p>Donec sollicitudin molestie malesuada. Curabitur arcu erat, accumsan id imperdiet et, porttitor at
-                    sem. Vestibulum ac diam sit amet quam vehicula elementum sed sit amet dui. Nulla quis lorem ut
-                    libero malesuada feugiat. Vestibulum ac diam sit amet</p>
-            </div>
-            <p class="jurnalist">
-                <img src="../../assets/images/globe-xsmall.png" alt="the globe logo"><span>Mary Maxey, The Globe And
-                    Mail</span>
-            </p>
         </div>
     </div>
 </template>
 <script>
 export default {
-    name: 'MyCritics'
+    name: 'MyCritics',
+    data() {
+        return {
+            cards: [
+                {
+                    title: 'A True Masterpiece, Bravo!',
+                    text: 'Nulla quis lorem ut libero malesuada feugiat. Vivamus magna justo, lacinia eget consectrtur sed, convallis at tellus. Vivamus suscipit tortor eget felis porttitor volupat. Nulla quis lorem ut libero malesuada feug at.',
+                    image: 'theguardian',
+                    referance: 'Gerald Hendeley, The Guardian'
+                },
+                {
+                    title: 'A Unique View On the World',
+                    text: 'Donec sollicitudin molestie malesuada. Curabitur arcu erat, accumsan id imperdiet et, porttitor at sem. Vestibulum ac diam sit amet quam vehicula elementum sed sit amet dui. Nulla quis lorem ut libero malesuada feugiat. Vestibulum ac diam sit amet',
+                    image: 'globe',
+                    referance: 'Mary Maxey, The Globe And Mail'
+                }
+            ]
+        }
+    },
+    methods: {
+        getImagePath: function (img) {
+            return new URL(`../../assets/images/${img}-xsmall.png`, import.meta.url).href;
+        }
+    }
 }
 </script>
 <style scoped lang="scss">
@@ -141,7 +152,7 @@ export default {
         width: 35%;
         margin-left: 5%;
 
-        .card-wrapper {
+        .card {
             background-color: variables.$color-cream;
             text-align: center;
             padding: 30px 15px;
